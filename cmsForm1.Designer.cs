@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitle = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.lblEventsSelectedDate = new System.Windows.Forms.Label();
@@ -78,15 +79,23 @@
             this.textBoxTime = new System.Windows.Forms.TextBox();
             this.lblTime = new System.Windows.Forms.Label();
             this.textBoxDate = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnClear = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Noto Serif", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(23, 59);
+            this.lblTitle.Location = new System.Drawing.Point(23, 22);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(196, 59);
             this.lblTitle.TabIndex = 0;
@@ -182,21 +191,21 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1086, 337);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1118, 338);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(53, 23);
             this.button1.TabIndex = 12;
-            this.button1.Text = "Add Event";
+            this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(280, 60);
+            this.comboBox1.Location = new System.Drawing.Point(276, 60);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(83, 21);
             this.comboBox1.TabIndex = 13;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -204,7 +213,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(765, 60);
+            this.label4.Location = new System.Drawing.Point(774, 60);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 16);
             this.label4.TabIndex = 15;
@@ -213,7 +222,8 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(816, 59);
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Location = new System.Drawing.Point(825, 59);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(143, 20);
             this.textBox3.TabIndex = 16;
@@ -221,22 +231,16 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.AutoSize = true;
             this.tableLayoutPanel1.ColumnCount = 8;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.93103F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.06897F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
-            this.tableLayoutPanel1.Controls.Add(this.lblSun, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblMon, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblTues, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblWed, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblThurs, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblFri, 6, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblSat, 7, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.Controls.Add(this.lbl12am, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lbl1am, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.lbl2am, 0, 3);
@@ -261,131 +265,118 @@
             this.tableLayoutPanel1.Controls.Add(this.lbl9pm, 0, 22);
             this.tableLayoutPanel1.Controls.Add(this.lbl10pm, 0, 23);
             this.tableLayoutPanel1.Controls.Add(this.lbl11pm, 0, 24);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.Black;
             this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(280, 135);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 25;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.56565F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.43435F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 9F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 14F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.60493F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.39506F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 296F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 9F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 9F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 9F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(679, 371);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(700, 1018);
             this.tableLayoutPanel1.TabIndex = 17;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // lblSun
             // 
             this.lblSun.AutoSize = true;
-            this.lblSun.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSun.Location = new System.Drawing.Point(54, 0);
+            this.lblSun.Location = new System.Drawing.Point(349, 104);
             this.lblSun.Name = "lblSun";
-            this.lblSun.Size = new System.Drawing.Size(79, 50);
+            this.lblSun.Size = new System.Drawing.Size(26, 13);
             this.lblSun.TabIndex = 0;
             this.lblSun.Text = "Sun";
-            this.lblSun.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSun.Click += new System.EventHandler(this.lblSun_Click);
             // 
             // lblMon
             // 
             this.lblMon.AutoSize = true;
-            this.lblMon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblMon.Location = new System.Drawing.Point(139, 0);
+            this.lblMon.Location = new System.Drawing.Point(442, 104);
             this.lblMon.Name = "lblMon";
-            this.lblMon.Size = new System.Drawing.Size(72, 50);
+            this.lblMon.Size = new System.Drawing.Size(28, 13);
             this.lblMon.TabIndex = 1;
             this.lblMon.Text = "Mon";
-            this.lblMon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblMon.Click += new System.EventHandler(this.lblMon_Click);
             // 
             // lblTues
             // 
             this.lblTues.AutoSize = true;
-            this.lblTues.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTues.Location = new System.Drawing.Point(217, 0);
+            this.lblTues.Location = new System.Drawing.Point(539, 104);
             this.lblTues.Name = "lblTues";
-            this.lblTues.Size = new System.Drawing.Size(92, 50);
+            this.lblTues.Size = new System.Drawing.Size(31, 13);
             this.lblTues.TabIndex = 2;
             this.lblTues.Text = "Tues";
-            this.lblTues.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTues.Click += new System.EventHandler(this.lblTues_Click);
             // 
             // lblWed
             // 
             this.lblWed.AutoSize = true;
-            this.lblWed.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblWed.Location = new System.Drawing.Point(315, 0);
+            this.lblWed.Location = new System.Drawing.Point(629, 104);
             this.lblWed.Name = "lblWed";
-            this.lblWed.Size = new System.Drawing.Size(87, 50);
+            this.lblWed.Size = new System.Drawing.Size(30, 13);
             this.lblWed.TabIndex = 3;
             this.lblWed.Text = "Wed";
-            this.lblWed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblWed.Click += new System.EventHandler(this.lblWed_Click);
             // 
             // lblThurs
             // 
             this.lblThurs.AutoSize = true;
-            this.lblThurs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblThurs.Location = new System.Drawing.Point(408, 0);
+            this.lblThurs.Location = new System.Drawing.Point(721, 104);
             this.lblThurs.Name = "lblThurs";
-            this.lblThurs.Size = new System.Drawing.Size(106, 50);
+            this.lblThurs.Size = new System.Drawing.Size(34, 13);
             this.lblThurs.TabIndex = 4;
             this.lblThurs.Text = "Thurs";
-            this.lblThurs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblThurs.Click += new System.EventHandler(this.lblThurs_Click);
             // 
             // lblFri
             // 
             this.lblFri.AutoSize = true;
-            this.lblFri.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFri.Location = new System.Drawing.Point(520, 0);
+            this.lblFri.Location = new System.Drawing.Point(822, 104);
             this.lblFri.Name = "lblFri";
-            this.lblFri.Size = new System.Drawing.Size(80, 50);
+            this.lblFri.Size = new System.Drawing.Size(18, 13);
             this.lblFri.TabIndex = 5;
             this.lblFri.Text = "Fri";
-            this.lblFri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblFri.Click += new System.EventHandler(this.lblFri_Click);
             // 
             // lblSat
             // 
             this.lblSat.AutoSize = true;
-            this.lblSat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSat.Location = new System.Drawing.Point(606, 0);
+            this.lblSat.Location = new System.Drawing.Point(917, 104);
             this.lblSat.Name = "lblSat";
-            this.lblSat.Size = new System.Drawing.Size(70, 50);
+            this.lblSat.Size = new System.Drawing.Size(23, 13);
             this.lblSat.TabIndex = 6;
             this.lblSat.Text = "Sat";
-            this.lblSat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSat.Click += new System.EventHandler(this.lblSat_Click);
             // 
             // lbl12am
             // 
             this.lbl12am.AutoSize = true;
             this.lbl12am.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl12am.Location = new System.Drawing.Point(3, 50);
+            this.lbl12am.Location = new System.Drawing.Point(3, 32);
             this.lbl12am.Name = "lbl12am";
-            this.lbl12am.Size = new System.Drawing.Size(45, 39);
+            this.lbl12am.Size = new System.Drawing.Size(44, 13);
             this.lbl12am.TabIndex = 7;
             this.lbl12am.Text = "12 am";
             this.lbl12am.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -395,9 +386,9 @@
             // 
             this.lbl1am.AutoSize = true;
             this.lbl1am.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl1am.Location = new System.Drawing.Point(3, 89);
+            this.lbl1am.Location = new System.Drawing.Point(3, 45);
             this.lbl1am.Name = "lbl1am";
-            this.lbl1am.Size = new System.Drawing.Size(45, 19);
+            this.lbl1am.Size = new System.Drawing.Size(44, 18);
             this.lbl1am.TabIndex = 8;
             this.lbl1am.Text = "1 am";
             this.lbl1am.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -407,9 +398,9 @@
             // 
             this.lbl2am.AutoSize = true;
             this.lbl2am.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl2am.Location = new System.Drawing.Point(3, 108);
+            this.lbl2am.Location = new System.Drawing.Point(3, 63);
             this.lbl2am.Name = "lbl2am";
-            this.lbl2am.Size = new System.Drawing.Size(45, 22);
+            this.lbl2am.Size = new System.Drawing.Size(44, 20);
             this.lbl2am.TabIndex = 9;
             this.lbl2am.Text = "2 am";
             this.lbl2am.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -419,9 +410,9 @@
             // 
             this.lbl3am.AutoSize = true;
             this.lbl3am.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl3am.Location = new System.Drawing.Point(3, 130);
+            this.lbl3am.Location = new System.Drawing.Point(3, 83);
             this.lbl3am.Name = "lbl3am";
-            this.lbl3am.Size = new System.Drawing.Size(45, 15);
+            this.lbl3am.Size = new System.Drawing.Size(44, 48);
             this.lbl3am.TabIndex = 10;
             this.lbl3am.Text = "3 am";
             this.lbl3am.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -431,9 +422,9 @@
             // 
             this.lbl4am.AutoSize = true;
             this.lbl4am.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl4am.Location = new System.Drawing.Point(3, 145);
+            this.lbl4am.Location = new System.Drawing.Point(3, 131);
             this.lbl4am.Name = "lbl4am";
-            this.lbl4am.Size = new System.Drawing.Size(45, 9);
+            this.lbl4am.Size = new System.Drawing.Size(44, 47);
             this.lbl4am.TabIndex = 11;
             this.lbl4am.Text = "4 am";
             this.lbl4am.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -443,9 +434,9 @@
             // 
             this.lbl5am.AutoSize = true;
             this.lbl5am.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl5am.Location = new System.Drawing.Point(3, 154);
+            this.lbl5am.Location = new System.Drawing.Point(3, 178);
             this.lbl5am.Name = "lbl5am";
-            this.lbl5am.Size = new System.Drawing.Size(45, 10);
+            this.lbl5am.Size = new System.Drawing.Size(44, 296);
             this.lbl5am.TabIndex = 12;
             this.lbl5am.Text = "5 am";
             this.lbl5am.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -455,9 +446,9 @@
             // 
             this.lbl6am.AutoSize = true;
             this.lbl6am.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl6am.Location = new System.Drawing.Point(3, 164);
+            this.lbl6am.Location = new System.Drawing.Point(3, 474);
             this.lbl6am.Name = "lbl6am";
-            this.lbl6am.Size = new System.Drawing.Size(45, 12);
+            this.lbl6am.Size = new System.Drawing.Size(44, 28);
             this.lbl6am.TabIndex = 13;
             this.lbl6am.Text = "6 am";
             this.lbl6am.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -467,9 +458,9 @@
             // 
             this.lbl7am.AutoSize = true;
             this.lbl7am.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl7am.Location = new System.Drawing.Point(3, 176);
+            this.lbl7am.Location = new System.Drawing.Point(3, 502);
             this.lbl7am.Name = "lbl7am";
-            this.lbl7am.Size = new System.Drawing.Size(45, 10);
+            this.lbl7am.Size = new System.Drawing.Size(44, 62);
             this.lbl7am.TabIndex = 14;
             this.lbl7am.Text = "7 am";
             this.lbl7am.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -479,9 +470,9 @@
             // 
             this.lbl8am.AutoSize = true;
             this.lbl8am.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl8am.Location = new System.Drawing.Point(3, 186);
+            this.lbl8am.Location = new System.Drawing.Point(3, 564);
             this.lbl8am.Name = "lbl8am";
-            this.lbl8am.Size = new System.Drawing.Size(45, 17);
+            this.lbl8am.Size = new System.Drawing.Size(44, 54);
             this.lbl8am.TabIndex = 15;
             this.lbl8am.Text = "8 am";
             this.lbl8am.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -491,9 +482,9 @@
             // 
             this.lbl9am.AutoSize = true;
             this.lbl9am.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl9am.Location = new System.Drawing.Point(3, 203);
+            this.lbl9am.Location = new System.Drawing.Point(3, 618);
             this.lbl9am.Name = "lbl9am";
-            this.lbl9am.Size = new System.Drawing.Size(45, 19);
+            this.lbl9am.Size = new System.Drawing.Size(44, 37);
             this.lbl9am.TabIndex = 16;
             this.lbl9am.Text = "9 am";
             this.lbl9am.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -503,9 +494,9 @@
             // 
             this.lbl10am.AutoSize = true;
             this.lbl10am.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl10am.Location = new System.Drawing.Point(3, 222);
+            this.lbl10am.Location = new System.Drawing.Point(3, 655);
             this.lbl10am.Name = "lbl10am";
-            this.lbl10am.Size = new System.Drawing.Size(45, 14);
+            this.lbl10am.Size = new System.Drawing.Size(44, 31);
             this.lbl10am.TabIndex = 17;
             this.lbl10am.Text = "10 am";
             this.lbl10am.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -515,9 +506,9 @@
             // 
             this.lbl11am.AutoSize = true;
             this.lbl11am.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl11am.Location = new System.Drawing.Point(3, 236);
+            this.lbl11am.Location = new System.Drawing.Point(3, 686);
             this.lbl11am.Name = "lbl11am";
-            this.lbl11am.Size = new System.Drawing.Size(45, 13);
+            this.lbl11am.Size = new System.Drawing.Size(44, 26);
             this.lbl11am.TabIndex = 18;
             this.lbl11am.Text = "11 am";
             this.lbl11am.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -527,9 +518,9 @@
             // 
             this.lbl12pm.AutoSize = true;
             this.lbl12pm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl12pm.Location = new System.Drawing.Point(3, 249);
+            this.lbl12pm.Location = new System.Drawing.Point(3, 712);
             this.lbl12pm.Name = "lbl12pm";
-            this.lbl12pm.Size = new System.Drawing.Size(45, 13);
+            this.lbl12pm.Size = new System.Drawing.Size(44, 31);
             this.lbl12pm.TabIndex = 19;
             this.lbl12pm.Text = "12 pm";
             this.lbl12pm.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -539,9 +530,9 @@
             // 
             this.lbl1pm.AutoSize = true;
             this.lbl1pm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl1pm.Location = new System.Drawing.Point(3, 262);
+            this.lbl1pm.Location = new System.Drawing.Point(3, 743);
             this.lbl1pm.Name = "lbl1pm";
-            this.lbl1pm.Size = new System.Drawing.Size(45, 12);
+            this.lbl1pm.Size = new System.Drawing.Size(44, 33);
             this.lbl1pm.TabIndex = 20;
             this.lbl1pm.Text = "1 pm";
             this.lbl1pm.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -551,9 +542,9 @@
             // 
             this.lbl2pm.AutoSize = true;
             this.lbl2pm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl2pm.Location = new System.Drawing.Point(3, 274);
+            this.lbl2pm.Location = new System.Drawing.Point(3, 776);
             this.lbl2pm.Name = "lbl2pm";
-            this.lbl2pm.Size = new System.Drawing.Size(45, 9);
+            this.lbl2pm.Size = new System.Drawing.Size(44, 31);
             this.lbl2pm.TabIndex = 21;
             this.lbl2pm.Text = "2 pm";
             this.lbl2pm.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -563,9 +554,9 @@
             // 
             this.lbl3pm.AutoSize = true;
             this.lbl3pm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl3pm.Location = new System.Drawing.Point(3, 283);
+            this.lbl3pm.Location = new System.Drawing.Point(3, 807);
             this.lbl3pm.Name = "lbl3pm";
-            this.lbl3pm.Size = new System.Drawing.Size(45, 12);
+            this.lbl3pm.Size = new System.Drawing.Size(44, 30);
             this.lbl3pm.TabIndex = 22;
             this.lbl3pm.Text = "3 pm";
             this.lbl3pm.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -575,9 +566,9 @@
             // 
             this.lbl4pm.AutoSize = true;
             this.lbl4pm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl4pm.Location = new System.Drawing.Point(3, 295);
+            this.lbl4pm.Location = new System.Drawing.Point(3, 837);
             this.lbl4pm.Name = "lbl4pm";
-            this.lbl4pm.Size = new System.Drawing.Size(45, 8);
+            this.lbl4pm.Size = new System.Drawing.Size(44, 34);
             this.lbl4pm.TabIndex = 23;
             this.lbl4pm.Text = "4 pm";
             this.lbl4pm.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -587,9 +578,9 @@
             // 
             this.lbl5pm.AutoSize = true;
             this.lbl5pm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl5pm.Location = new System.Drawing.Point(3, 303);
+            this.lbl5pm.Location = new System.Drawing.Point(3, 871);
             this.lbl5pm.Name = "lbl5pm";
-            this.lbl5pm.Size = new System.Drawing.Size(45, 12);
+            this.lbl5pm.Size = new System.Drawing.Size(44, 34);
             this.lbl5pm.TabIndex = 24;
             this.lbl5pm.Text = "5 pm";
             this.lbl5pm.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -599,9 +590,9 @@
             // 
             this.lbl6pm.AutoSize = true;
             this.lbl6pm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl6pm.Location = new System.Drawing.Point(3, 315);
+            this.lbl6pm.Location = new System.Drawing.Point(3, 905);
             this.lbl6pm.Name = "lbl6pm";
-            this.lbl6pm.Size = new System.Drawing.Size(45, 8);
+            this.lbl6pm.Size = new System.Drawing.Size(44, 24);
             this.lbl6pm.TabIndex = 25;
             this.lbl6pm.Text = "6 pm";
             this.lbl6pm.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -611,9 +602,9 @@
             // 
             this.lbl7pm.AutoSize = true;
             this.lbl7pm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl7pm.Location = new System.Drawing.Point(3, 323);
+            this.lbl7pm.Location = new System.Drawing.Point(3, 929);
             this.lbl7pm.Name = "lbl7pm";
-            this.lbl7pm.Size = new System.Drawing.Size(45, 9);
+            this.lbl7pm.Size = new System.Drawing.Size(44, 25);
             this.lbl7pm.TabIndex = 26;
             this.lbl7pm.Text = "7 pm";
             this.lbl7pm.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -623,9 +614,9 @@
             // 
             this.lbl8pm.AutoSize = true;
             this.lbl8pm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl8pm.Location = new System.Drawing.Point(3, 332);
+            this.lbl8pm.Location = new System.Drawing.Point(3, 954);
             this.lbl8pm.Name = "lbl8pm";
-            this.lbl8pm.Size = new System.Drawing.Size(45, 8);
+            this.lbl8pm.Size = new System.Drawing.Size(44, 21);
             this.lbl8pm.TabIndex = 27;
             this.lbl8pm.Text = "8 pm";
             this.lbl8pm.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -635,9 +626,9 @@
             // 
             this.lbl9pm.AutoSize = true;
             this.lbl9pm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl9pm.Location = new System.Drawing.Point(3, 340);
+            this.lbl9pm.Location = new System.Drawing.Point(3, 975);
             this.lbl9pm.Name = "lbl9pm";
-            this.lbl9pm.Size = new System.Drawing.Size(45, 13);
+            this.lbl9pm.Size = new System.Drawing.Size(44, 16);
             this.lbl9pm.TabIndex = 28;
             this.lbl9pm.Text = "9 pm";
             this.lbl9pm.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -647,9 +638,9 @@
             // 
             this.lbl10pm.AutoSize = true;
             this.lbl10pm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl10pm.Location = new System.Drawing.Point(3, 353);
+            this.lbl10pm.Location = new System.Drawing.Point(3, 991);
             this.lbl10pm.Name = "lbl10pm";
-            this.lbl10pm.Size = new System.Drawing.Size(45, 9);
+            this.lbl10pm.Size = new System.Drawing.Size(44, 13);
             this.lbl10pm.TabIndex = 29;
             this.lbl10pm.Text = "10 pm";
             this.lbl10pm.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -659,9 +650,9 @@
             // 
             this.lbl11pm.AutoSize = true;
             this.lbl11pm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl11pm.Location = new System.Drawing.Point(3, 362);
+            this.lbl11pm.Location = new System.Drawing.Point(3, 1004);
             this.lbl11pm.Name = "lbl11pm";
-            this.lbl11pm.Size = new System.Drawing.Size(45, 9);
+            this.lbl11pm.Size = new System.Drawing.Size(44, 14);
             this.lbl11pm.TabIndex = 30;
             this.lbl11pm.Text = "11 pm";
             this.lbl11pm.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -669,13 +660,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1126, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(1141, 22);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(45, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_2);
             // 
             // textBoxTime
             // 
@@ -683,7 +674,6 @@
             this.textBoxTime.Name = "textBoxTime";
             this.textBoxTime.Size = new System.Drawing.Size(110, 20);
             this.textBoxTime.TabIndex = 19;
-            this.textBoxTime.Text = "hh:mm";
             this.textBoxTime.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // lblTime
@@ -703,20 +693,72 @@
             this.textBoxDate.Name = "textBoxDate";
             this.textBoxDate.Size = new System.Drawing.Size(110, 20);
             this.textBoxDate.TabIndex = 21;
-            this.textBoxDate.Text = "mm/dd/yyyy";
             this.textBoxDate.TextChanged += new System.EventHandler(this.textBoxDate_TextChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
+            this.panel1.Location = new System.Drawing.Point(270, 135);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(717, 371);
+            this.panel1.TabIndex = 22;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.accountToolStripMenuItem,
+            this.settingsToolStripMenuItem,
+            this.logoutToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(120, 70);
+            // 
+            // accountToolStripMenuItem
+            // 
+            this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.accountToolStripMenuItem.Text = "Account";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(1019, 337);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(61, 24);
+            this.btnClear.TabIndex = 23;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // cmsForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(1190, 521);
+            this.ClientSize = new System.Drawing.Size(1220, 623);
+            this.Controls.Add(this.lblSat);
+            this.Controls.Add(this.lblFri);
+            this.Controls.Add(this.lblThurs);
+            this.Controls.Add(this.lblWed);
+            this.Controls.Add(this.lblTues);
+            this.Controls.Add(this.lblMon);
+            this.Controls.Add(this.lblSun);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.textBoxDate);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.textBoxTime);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox1);
@@ -731,11 +773,15 @@
             this.Controls.Add(this.lblEventsSelectedDate);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.panel1);
             this.Name = "cmsForm1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.cmsForm1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -793,6 +839,12 @@
         private System.Windows.Forms.TextBox textBoxTime;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.TextBox textBoxDate;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 

@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace julie
 {
@@ -16,7 +14,14 @@ namespace julie
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            // Start the message loop with the main form
             Application.Run(new cmsForm1());
         }
     }
+
+    public partial class cmsForm1 : Form
+    {
+
+     }
 }
